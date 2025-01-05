@@ -1,0 +1,190 @@
+/* General Reset and Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #74b9ff, #0984e3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+}
+
+/* Container Styling */
+.container {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.header {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.instructions {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #dfe6e9;
+}
+
+/* Game Area */
+.game-area {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+}
+
+.number {
+    margin-bottom: 20px;
+}
+
+#number {
+    padding: 10px;
+    font-size: 1.2rem;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #333;
+}
+
+#number:focus {
+    outline: none;
+    border: 2px solid #6c5ce7;
+}
+
+/* Feedback Styling with Animation */
+
+/* Submit Button Styling */
+.submit-button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    background-color: #6c5ce7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #341f97;
+    transform: scale(1.05);
+}
+
+.submit-button:active {
+    background-color: #2e1460;
+    transform: scale(1);
+}
+
+/* Reset Button */
+.reset-button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    background-color: #6c5ce7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.reset-button:hover {
+    background-color: #341f97;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+
+/* Small Devices (Phones) */
+@media (max-width: 480px) {
+    .header {
+        font-size: 2rem;
+    }
+
+    .instructions {
+        font-size: 1rem;
+    }
+
+    .feedback {
+        font-size: 1.1rem;
+    }
+
+    .submit-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 768px) {
+    .header {
+        font-size: 2.2rem;
+    }
+
+    .instructions {
+        font-size: 1.1rem;
+    }
+
+    #number {
+        font-size: 1.1rem;
+    }
+}
+
+/* Larger Devices (Laptops and Desktops) */
+@media (min-width: 1024px) {
+    .game-area {
+        padding: 30px;
+        max-width: 500px;
+    }
+
+    .header {
+        font-size: 3rem;
+    }
+
+    .instructions {
+        font-size: 1.3rem;
+    }
+
+    .feedback {
+        font-size: 1.5rem;
+    }
+}
+/* Feedback Styling with Animation */
+.feedback {
+    font-size: 1.3rem;
+    transition: 0.2s all;
+    margin: 10px 0;
+    color: #ffbe76;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 2s ease-out forwards;
+}
+
+/* Animation for Feedback */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
